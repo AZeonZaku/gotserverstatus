@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json.schemastore.org/nest-cli",
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "src",
+  "compilerOptions": {
+    "deleteOutDir": true,
+    "assets": [
+      { "include": "public/**/*", "outDir": "dist/src", "watchAssets": true },
+      { "include": "../titles/", "outDir": "dist/src/titles" },
+      { "include": "../config/", "outDir": "dist/src/config" },
+      { "include": "../nginx/", "outDir": "dist/src/nginx" }
+    ]
+  }
+}

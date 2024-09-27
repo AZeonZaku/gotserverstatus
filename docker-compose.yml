@@ -1,0 +1,22 @@
+services:
+  backend:
+    build: .
+    environment:
+        API_PORT: 36000
+        MONGO_URI: mongodb://database:27017/
+        SWAGGER_API: true
+        nginx: true
+    ports:
+      - '36000:36000'
+    # volumes:
+    # Optionally mount static content volume for Nginx (cannot access container).
+    # Use ./src/ instead of ./dist/ so we don't have to build on host. 
+    #   - './src/public:/xenia-web-service/dist/src/public'
+    depends_on:
+      - database
+  database:
+    image: mongo
+    ports:
+      - '27018:27017'
+    volumes:
+      - './data/mongo:/data/db'
