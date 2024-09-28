@@ -3,7 +3,7 @@
         "port": 8080
     },
     "persistance": {
-        "host": "https://gotserverstatus.vercel.app",
+        "host": "127.0.0.1",
         "user": "root",
         "password": "root",
         "database": "xenia"
