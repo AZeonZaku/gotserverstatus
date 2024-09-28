@@ -9,8 +9,8 @@
   "routes": [
     { "handle": "filesystem" },
     {
-      "src": "/gotserverstatus-main",
-      "dest": "main.ts"
+      "src": "./",
+      "dest": "./"
    }
   ]
 }
